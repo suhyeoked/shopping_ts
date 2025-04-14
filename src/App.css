@@ -1,0 +1,5 @@
+.MainBg {
+    height: 600px;
+    background-image: url("./image/Stone.jpg");
+    background-size: cover;
+}
