@@ -1,5 +1,15 @@
 .MainBg {
-    height: 600px;
+    height: 500px;
     background-image: url("./image/Stone.jpg");
     background-size: cover;
+    background-position: center;
+}
+
+.container{
+    text-align: center;
+}
+
+
+.col-md-4 > img {
+    width: 100%;
 }

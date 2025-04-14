@@ -1,11 +1,26 @@
 import { useState } from 'react'
 import './App.css'
+import Product from './component/product'
+import stoneJK1 from "./image/stoneJK.avif"
+import stoneJK2 from "./image/stoneJK1.avif"
+import stoneJK3 from "./image/stoneJK2.avif"
+import Data from "./component/data"
 
 import { Navbar , Container , Nav } from 'react-bootstrap';
 
+
+
+interface DataInterFace {
+  id : number 
+  title : string
+  content : string
+  price : number
+}
+
+
 function App() {
-
-
+  let [product , setProduct] = useState<DataInterFace[]>(Data)
+  const MainImage = [stoneJK1 , stoneJK2, stoneJK3]
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -19,9 +34,12 @@ function App() {
         </Container>
       </Navbar>
       
-      <div className="MainBg">
-        
-      </div>
+      <div className="MainBg"></div>
+        <div className="container">
+          <div className="row">
+            <Product product ={product} MainImage={MainImage} />
+          </div>
+        </div>
     </>
   )
 }
