@@ -1,3 +1,7 @@
+.MyPick {
+    cursor: pointer;
+}
+
 .MainBg {
     height: 500px;
     background-image: url("./image/Stone.jpg");
@@ -12,4 +16,9 @@
 
 .col-md-4 > img {
     width: 100%;
+}
+
+.Page404 {
+    text-align: center;
+    font-size: 3em;
 }

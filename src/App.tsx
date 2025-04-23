@@ -5,9 +5,8 @@ import stoneJK1 from "./image/stoneJK.avif"
 import stoneJK2 from "./image/stoneJK1.avif"
 import stoneJK3 from "./image/stoneJK2.avif"
 import Data from "./component/data"
-
-import { Navbar , Container , Nav } from 'react-bootstrap';
-
+import { Routes , Route ,Link, useNavigate } from 'react-router-dom'
+import Navba from './component/navba'
 
 
 interface DataInterFace {
@@ -17,29 +16,21 @@ interface DataInterFace {
   price : number
 }
 
-
 function App() {
   let [product , setProduct] = useState<DataInterFace[]>(Data)
   const MainImage = [stoneJK1 , stoneJK2, stoneJK3]
+
+
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">최수혁 PICK</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      
+      <Navba />
       <div className="MainBg"></div>
         <div className="container">
           <div className="row">
-            <Product product ={product} MainImage={MainImage} />
+            <Product product = {product} MainImage ={MainImage}/>
           </div>
         </div>
+        
     </>
   )
 }
