@@ -1,5 +1,29 @@
-.MyPick {
+.NavBa {
+    width: 100%;
+    background-color: #212529;
+    color: white;
+}
+
+.NavBa ul {
+    list-style: none;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.NavBa ul > li {
+    margin: 0 14px;
     cursor: pointer;
+}
+
+.NavBa ul > li:not(.MyPick) {
+    color: rgba(255, 255, 255, 0.589);
+}
+
+.NavBa ul > li:not(.MyPick):hover {
+    color: white;
+    transition: .5s;
 }
 
 .MainBg {
@@ -12,6 +36,7 @@
 .container{
     text-align: center;
 }
+
 
 
 .col-md-4 > img {

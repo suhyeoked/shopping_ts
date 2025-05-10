@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { BrowserRouter , Routes , Route} from 'react-router-dom'
 import './App.css'
 import Product from './component/product'
 import stoneJK1 from "./image/stoneJK.avif"
 import stoneJK2 from "./image/stoneJK1.avif"
 import stoneJK3 from "./image/stoneJK2.avif"
 import Data from "./component/data"
-import { Routes , Route ,Link, useNavigate } from 'react-router-dom'
 import Navba from './component/navba'
 
 
@@ -17,9 +17,8 @@ interface DataInterFace {
 }
 
 function App() {
-  let [product , setProduct] = useState<DataInterFace[]>(Data)
+  let [product] = useState<DataInterFace[]>(Data)
   const MainImage = [stoneJK1 , stoneJK2, stoneJK3]
-
 
   return (
     <>
@@ -30,7 +29,6 @@ function App() {
             <Product product = {product} MainImage ={MainImage}/>
           </div>
         </div>
-        
     </>
   )
 }

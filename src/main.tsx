@@ -6,15 +6,13 @@ import { BrowserRouter , Routes , Route} from 'react-router-dom'
 import Detail from './component/detail.tsx'
 import Page404 from './component/page404.tsx'
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
     <Routes>
         <Route path='/' element ={<App/>}/>
-        <Route path='/detail' element={<Detail />}/>
+        <Route path='/detail' element={<Detail />} />
         <Route path='*' element={<Page404 />}/>
-        <Route />
     </Routes>
     </BrowserRouter>
   </StrictMode>,
